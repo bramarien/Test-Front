@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  elysium_test:
+    container_name: react_nginx
+    build: .
+    ports:
+      - "80:80"
