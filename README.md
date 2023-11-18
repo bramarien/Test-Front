@@ -25,3 +25,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 **Note: This is to put in production!**
 
 The Docker-compose will user Docker to contenarize our project build with `npm run build` and use this image to create a fresh new container under nginx. Then it will be up under the port 80.
+This is the only command you should use if you are deploying the app right after the git clone.

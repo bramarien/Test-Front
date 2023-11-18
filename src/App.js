@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from './components/NavBar';
+import Header from "./components/Header";
 import Home from "./pages/Home";
 import Collection from './pages/Collection';
 import Categories from "./pages/Categories";
@@ -9,7 +9,7 @@ import "./style/index.css"
 function App() {
   return (
     <BrowserRouter>
-      <NavBar /> 
+      <Header/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/collection" element={<Collection/>} />
