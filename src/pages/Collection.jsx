@@ -2,15 +2,22 @@ import { useState } from "react";
 import { bookData } from "../constants/bookData.js"
 import Filter from "../components/Filter.jsx";
 import BookGrid from "../components/BookGrid.jsx";
+import { useLocation } from "react-router-dom";
 
 
-function Collection({ sortType = "None", available = "Both", genre = "None" }) {
+function Collection() {
+
+    const location = useLocation()
 
     const [data, setData] = useState(bookData);
 
     const defaultSettings = { sortType: "None", available: "Both", genre: "None" };
     const [filterCheck, setFilterCheck] = useState(true);
-    const [filterSetting, setFilterSetting] = useState({ sortType, available, genre });
+    const [filterSetting, setFilterSetting] = useState(() => {
+        if (location.state)
+            return { sortType: "None", available: "Both", genre: location.state }
+        return defaultSettings
+    });
     const [filterSearch, setFilterSearch] = useState("");
 
     function filterReset() {
@@ -21,7 +28,6 @@ function Collection({ sortType = "None", available = "Both", genre = "None" }) {
 
     const sortByDate = (arr) => arr.sort((a, b) => (a.year > b.year) ? 1 : -1);
     const sortByAplha = (arr) => arr.sort((a, b) => (a.title.localeCompare(b.title)));
-
 
     function filterSort(value) {
         if (value === "Date" || value === "Alpha") {

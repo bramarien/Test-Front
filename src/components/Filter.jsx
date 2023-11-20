@@ -1,5 +1,5 @@
 import SearchBar from "./SearchBar";
-import CheckBoxSort from "./CheckBoxSort";
+import RadioFilter from "./RadioFilter";
 
 function Filter(props) {
 
@@ -18,7 +18,7 @@ function Filter(props) {
                 <div className="flex justify-center">
                     <SearchBar fSearch={props.fSearch} setFSearch={props.setFSearch} />
                 </div>
-                <CheckBoxSort sort={props.sort} reset={props.reset} settings={props.settings} fSearch={props.fSearch}/>
+                <RadioFilter sort={props.sort} reset={props.reset} settings={props.settings} fSearch={props.fSearch}/>
             </div>
         </div>        
     )

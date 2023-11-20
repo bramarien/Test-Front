@@ -9,7 +9,7 @@ function BookGrid(props) {
                     if (props.settings.available === value.status || props.settings.available === "Both") {
                         if (props.settings.genre === value.genre || props.settings.genre === "None") {
                             if (value.title.toLowerCase().includes(props.fSearch.toLowerCase()) || value.author.toLowerCase().includes(props.fSearch.toLowerCase()))
-                                return <BookCard data={props.data} img={value.img} key={key} author={value.author} date={value.year} title={value.title} desc={value.description} />
+                                return <BookCard data={props.data} status={value.status} dueDate={value.dueDate} img={value.img} key={key} author={value.author} date={value.year} title={value.title} desc={value.description} />
                         }
                     }
                     return null

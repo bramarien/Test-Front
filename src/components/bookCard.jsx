@@ -22,6 +22,11 @@ function BookCard(props) {
                         {props.date}
                     </p>
                 </div>
+                <div className="absolute m-4 opacity-90">
+                    {
+                        props.status === "Emprunté" ? <span className="items-center rounded-md bg-indigo-50 px-2 py-1 text-lg font-medium text-indigo-600 ring-1 ring-inset ring-gray-500/10">Emprunté jusqu'au {props.dueDate}</span> : null
+                    }
+                </div>
             </div>
         </div>
     )

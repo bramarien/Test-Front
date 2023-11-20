@@ -1,5 +1,3 @@
-import React from "react";
-
 function Modal(props) {
 
     if (!props.open)
@@ -13,13 +11,15 @@ function Modal(props) {
                         <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                             <div className="sm:flex sm:items-start">
                                 <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <h3 className="text-base font-semibold leading-6 text-gray-900" id="modal-title">{props.title}</h3>
+                                    <h3 className="text-base text-center font-semibold leading-6 text-gray-900" id="modal-title">{props.title}</h3>
                                     {props.children}
                                 </div>
                             </div>
                         </div>
+                        
                         <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                            <button type="button" onClick={props.onDismiss} className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+                            <button type="button" onClick={props.onDismiss} className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100 sm:mt-0 sm:w-auto">Cancel</button>
+                            <button type="button" onClick={() => props.goToCollection(props.title)} className="mt-3 mr-1 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-100 sm:mt-0 sm:w-auto">Collection</button>
                         </div>
                     </div>
                 </div>

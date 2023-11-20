@@ -1,7 +1,6 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-function NavButton({ path, input, active }) {
+function HeaderButton({ path, input, active }) {
 
     const location = useLocation();
 
@@ -19,4 +18,4 @@ function NavButton({ path, input, active }) {
     );
 }
 
-export default NavButton;
+export default HeaderButton;

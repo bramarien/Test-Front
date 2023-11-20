@@ -2,7 +2,7 @@
 export const shelfData = [
     {
       "img": "https://images.unsplash.com/photo-1677024345898-1c901e4b4f33",
-      "name": "Romans Classiques",
+      "name": "Classiques",
       "books": [3,5,6,9,13,16,19,20,22]
     },
     {
