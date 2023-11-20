@@ -4,7 +4,7 @@ import RadioFilter from "./RadioFilter";
 function Filter(props) {
 
     return (
-        <div className="flex ">
+        <div className="flex">
             <input type="checkbox" id="drawer-toggle" className="relative sr-only peer" defaultChecked={props.fCheck}/>
             <label htmlFor="drawer-toggle" className="fixed opacity-80 z-10 left-0 inline-block p-4 transition-all duration-500 bg-gray-700 rounded-lg peer-checked:rotate-180 peer-checked:left-96" onClick={() => props.setFCheck(!props.fCheck)}>
                 <div className="w-6 h-1 mb-3 -rotate-45 bg-white rounded-lg"></div>
